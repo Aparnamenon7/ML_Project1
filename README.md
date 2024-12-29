@@ -1,22 +1,12 @@
-**Iris Classifier Flask Application
+**Iris Classifier Flask Application**
 
 This is a machine learning-based Flask web application that uses the **Iris dataset** for classification. The project compares two models: a **Decision Tree Classifier** and **Logistic Regression** for predicting iris flower species.
 
-**Table of Contents
-
-- [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [How to Run the App](#how-to-run-the-app)
-- [Results](#results)
-- [License](#license)
-
-**Project Overview
+**Project Overview**
 
 This project implements a Flask web application where users can view and coompare the classification results of two machine learning models (Decision Tree and Logistic Regression) based on the Iris dataset. The app also visualizes the classifier accuracies and confusion matrices.
 
-**Technologies Used
+**Technologies Used**
  **Python** 
  **Flask** for web framework
  **Scikit-learn** for machine learning models (Decision Tree, Logistic Regression)
