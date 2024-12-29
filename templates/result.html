@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding-top: 50px;
+        }
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .result-card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .result-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+
+    <!-- Result Content -->
+    <div class="container">
+        <h1>Model Prediction Results</h1>
+        
+            <h3>Accuracy of the Models:</h3>
+            <p><strong>Decision Tree Accuracy:</strong> {{ dt_accuracy }}</p>
+            <p><strong>Logistic Regression Accuracy:</strong> {{ lr_accuracy }}</p>
+
+            <h3>Model Comparison (Bar Chart)</h3>
+            <img src="data:image/png;base64,{{ bar_plot_url }}" alt="Bar Plot" />
+
+            <h3>Confusion Matrix - Decision Tree Classifier</h3>
+            <img src="data:image/png;base64,{{ dt_cm_plot_url }}" alt="Confusion Matrix - DT" />
+
+            <h3>Confusion Matrix - Logistic Regression</h3>
+            <img src="data:image/png;base64,{{ lr_cm_plot_url }}" alt="Confusion Matrix - LR" />
+
+            <br><br>
+            <a href="/" class="btn">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
